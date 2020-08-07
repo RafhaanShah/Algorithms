@@ -53,4 +53,10 @@ public class SortTest {
         assertEquals(sorted, list);
     }
 
+    @Test
+    public void testSelectionSort() {
+        SelectionSort.sort(list);
+        assertEquals(sorted, list);
+    }
+
 }
