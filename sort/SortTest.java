@@ -59,4 +59,10 @@ public class SortTest {
         assertEquals(sorted, list);
     }
 
+    @Test
+    public void testInsertionSort() {
+        SelectionSort.sort(list);
+        assertEquals(sorted, list);
+    }
+
 }
