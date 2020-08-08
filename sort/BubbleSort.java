@@ -1,5 +1,7 @@
 package sort;
 
+import static sort.SortUtil.swap;
+
 import java.util.List;
 
 public class BubbleSort {
@@ -13,12 +15,6 @@ public class BubbleSort {
                 }
             }
         }
-    }
-
-    private static <T> void swap(int a, int b, List<T> list) {
-        T temp = list.get(a);
-        list.set(a, list.get(b));
-        list.set(b, temp);
     }
 
 }
