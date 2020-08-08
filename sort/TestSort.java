@@ -65,4 +65,10 @@ public class TestSort {
         assertEquals(sorted, list);
     }
 
+    @Test
+    public void testShellSort() {
+        ShellSort.sort(list);
+        assertEquals(sorted, list);
+    }
+
 }
