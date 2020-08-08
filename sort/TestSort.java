@@ -71,4 +71,10 @@ public class TestSort {
         assertEquals(sorted, list);
     }
 
+    @Test
+    public void testMergeSort() {
+        MergeSort.sort(list);
+        assertEquals(sorted, list);
+    }
+
 }
