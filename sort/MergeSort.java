@@ -9,6 +9,16 @@ public class MergeSort {
         doSort(list, 0, list.size() - 1);
     }
 
+    public static <T extends Comparable<T>> void sortIterative(List<T> list) {
+        for (int i = 1; i <= list.size() - 1; i = 2 * i) {
+            for (int j = 0; j < list.size() - 1; j = j + (2 * i)) {
+                int m = Math.min(i + j - 1, list.size() - 1);
+                int r = Math.min(j + (2 * i) - 1, list.size() - 1);
+                merge(list, j, m, r);
+            }
+        }
+    }
+
     private static <T extends Comparable<T>> void doSort(List<T> list, int l, int r) {
         if (l < r) {
             int m = (l + r) / 2;
