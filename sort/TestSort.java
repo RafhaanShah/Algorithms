@@ -95,4 +95,10 @@ public class TestSort {
         assertEquals(sorted, list);
     }
 
+    @Test
+    public void testQuickSort() {
+        QuickSort.sort(list);
+        assertEquals(sorted, list);
+    }
+
 }
