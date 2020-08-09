@@ -83,4 +83,16 @@ public class TestSort {
         assertEquals(sorted, list);
     }
 
+    @Test
+    public void testBucketSort() {
+        BucketSort.sort(list);
+        assertEquals(sorted, list);
+    }
+
+    @Test
+    public void testBucketSortSqrt() {
+        BucketSort.sortSqrt(list);
+        assertEquals(sorted, list);
+    }
+
 }
