@@ -101,4 +101,10 @@ public class TestSort {
         assertEquals(sorted, list);
     }
 
+    @Test
+    public void testCountingSort() {
+        CountingSort.sort(list);
+        assertEquals(sorted, list);
+    }
+
 }
