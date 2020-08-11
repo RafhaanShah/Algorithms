@@ -107,4 +107,10 @@ public class TestSort {
         assertEquals(sorted, list);
     }
 
+    @Test
+    public void testHeapSort() {
+        HeapSort.sort(list);
+        assertEquals(sorted, list);
+    }
+
 }
