@@ -29,8 +29,8 @@ public class MergeSort {
     }
 
     private static <T extends Comparable<T>> void merge(List<T> list, int l, int m, int r) {
-        List<T> sublistA = new ArrayList<T>();
-        List<T> sublistB = new ArrayList<T>();
+        List<T> sublistA = new ArrayList<>();
+        List<T> sublistB = new ArrayList<>();
 
         for (int i = 0; i < m - l + 1; i++) {
             sublistA.add(list.remove(l));
