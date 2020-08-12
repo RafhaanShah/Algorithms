@@ -76,6 +76,16 @@ public class TestSearch {
 
     }
 
+    @Test
+    public void testDepthFirstSearchRecursive() {
+        setupDFSGraph();
+
+        DepthFirstSearch.traverseRecursive(graph, Integer.valueOf(1));
+
+        assertEquals("1 2 3 4 5 6 7 8 9 10 11 12 ", outContent.toString());
+
+    }
+
     private void setupBFSGraph() {
         graph.addEdge(Integer.valueOf(1), Integer.valueOf(2));
         graph.addEdge(Integer.valueOf(1), Integer.valueOf(3));
