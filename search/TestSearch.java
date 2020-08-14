@@ -65,13 +65,18 @@ public class TestSearch {
     }
 
     @Test
+    public void testFibonacciSearch() {
+        int result = FibonacciSearch.find(sortedList, 4);
+        assertEquals(3, result);
+    }
+
+    @Test
     public void testBreadthFirstSearch() {
         setupBFSGraph();
 
         BreadthFirstSearch.traverse(graph, 1);
 
         assertEquals("1 2 3 4 5 6 7 8 9 10 11 12 ", outContent.toString());
-
     }
 
     @Test
@@ -81,7 +86,6 @@ public class TestSearch {
         DepthFirstSearch.traverse(graph, 1);
 
         assertEquals("1 8 12 9 11 10 7 2 6 3 5 4 ", outContent.toString());
-
     }
 
     @Test
@@ -91,7 +95,6 @@ public class TestSearch {
         DepthFirstSearch.traverseRecursive(graph, 1);
 
         assertEquals("1 2 3 4 5 6 7 8 9 10 11 12 ", outContent.toString());
-
     }
 
     @Test
