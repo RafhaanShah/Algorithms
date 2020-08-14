@@ -59,6 +59,12 @@ public class TestSearch {
     }
 
     @Test
+    public void testJumpSearch() {
+        int result = JumpSearch.find(sortedList, 4);
+        assertEquals(3, result);
+    }
+
+    @Test
     public void testBreadthFirstSearch() {
         setupBFSGraph();
 
