@@ -16,11 +16,11 @@ public class BreadthFirstSearch {
 
         while (!q.isEmpty()) {
             T c = q.remove();
-            System.out.print(c + " ");
+            v.add(c);
+            System.out.print(c + " "); // visit
 
             for (T t : graph.getNeighbours(c)) {
                 if (!v.contains(t)) {
-                    v.add(t);
                     q.add(t);
                 }
             }

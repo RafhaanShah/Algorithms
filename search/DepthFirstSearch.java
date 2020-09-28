@@ -10,16 +10,16 @@ public class DepthFirstSearch {
         Stack<T> s = new Stack<>();
         Set<T> v = new HashSet<T>();
 
+        v.add(root);
         s.push(root);
 
         while (!s.isEmpty()) {
             T c = s.pop();
+            v.add(c);
+            System.out.print(c + " "); // visit
 
-            if (!v.contains(c)) {
-                v.add(c);
-                System.out.print(c + " ");
-
-                for (T t : graph.getNeighbours(c)) {
+            for (T t : graph.getNeighbours(c)) {
+                if (!v.contains(t)) {
                     s.push(t);
                 }
             }
@@ -35,8 +35,9 @@ public class DepthFirstSearch {
         v.add(c);
 
         for (T t : g.getNeighbours(c)) {
-            if (!v.contains(t))
+            if (!v.contains(t)) {
                 traverse(g, t, v);
+            }
         }
     }
 
